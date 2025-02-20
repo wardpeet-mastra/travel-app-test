@@ -1,6 +1,6 @@
 import { Mastra } from "@mastra/core";
 import { createLogger } from "@mastra/core/logger";
-import { Memory } from "@mastra/memory";
+// import { Memory } from "@mastra/memory";
 // import { PostgreStore } from "@mastra/pg";
 
 import { travelAgent, travelAnalyzer } from "./agents";
@@ -14,11 +14,11 @@ import { syncCsvDataWorkflow } from "./workflows/attractions";
 
 export const mastra = new Mastra({
   workflows: { syncCsvDataWorkflow },
-  memory: new Memory(),
+  // memory: new Memory(),
   // storage,
   agents: { travelAgent, travelAnalyzer },
   logger: createLogger({
-    name: "CONSOLE",
+    name: "MASTRA",
     level: "info",
   }),
 });
