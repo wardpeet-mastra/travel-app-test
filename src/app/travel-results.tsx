@@ -28,37 +28,37 @@ export function TravelResults({ travelData, goBack }: TravelResultsProps) {
     !travelData?.flights.outbound.airline ||
     !travelData?.flights.return.airline;
 
-  if (
-    !travelData?.flights.outbound.airline ||
-    !travelData?.flights.return.airline
-  ) {
-    return (
-      <div className="space-y-8">
-        <div className="space-y-6 max-w-2xl mx-auto">
-          <h2 className="inline-block bg-black text-white px-8 py-4 text-2xl font-bold shadow-[8px_8px_0px_0px_#000000] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all">
-            Your Travel Itinerary
-          </h2>
-          <Card className="bg-white rounded-none border-4 border-black p-8 shadow-[8px_8px_0px_0px_#000000] max-w-2xl mx-auto transform -rotate-1 hover:rotate-0 transition-transform">
-            <CardContent className="flex flex-col items-center justify-center h-full">
-              <div className="flex flex-col items-center gap-4">
-                <Frown className="h-8 w-8" />
-                <p className="text-xl font-bold">I could not plan your trip</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Button
-            onClick={() => {
-              goBack();
-            }}
-            size={"lg"}
-            className="bg-[var(--brut-red)] text-xl text-white p-8 w-full border-4 border-black shadow-[8px_8px_0px_0px_#000000] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all font-mono font-bold transform rotate-1 hover:rotate-0"
-          >
-            Go back
-          </Button>
-        </div>
-      </div>
-    );
-  }
+  // if (
+  //   !travelData?.flights.outbound.airline ||
+  //   !travelData?.flights.return.airline
+  // ) {
+  //   return (
+  //     <div className="space-y-8">
+  //       <div className="space-y-6 max-w-2xl mx-auto">
+  //         <h2 className="inline-block bg-black text-white px-8 py-4 text-2xl font-bold shadow-[8px_8px_0px_0px_#000000] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all">
+  //           Your Travel Itinerary
+  //         </h2>
+  //         <Card className="bg-white rounded-none border-4 border-black p-8 shadow-[8px_8px_0px_0px_#000000] max-w-2xl mx-auto transform -rotate-1 hover:rotate-0 transition-transform">
+  //           <CardContent className="flex flex-col items-center justify-center h-full">
+  //             <div className="flex flex-col items-center gap-4">
+  //               <Frown className="h-8 w-8" />
+  //               <p className="text-xl font-bold">I could not plan your trip</p>
+  //             </div>
+  //           </CardContent>
+  //         </Card>
+  //         <Button
+  //           onClick={() => {
+  //             goBack();
+  //           }}
+  //           size={"lg"}
+  //           className="bg-[var(--brut-red)] text-xl text-white p-8 w-full border-4 border-black shadow-[8px_8px_0px_0px_#000000] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all font-mono font-bold transform rotate-1 hover:rotate-0"
+  //         >
+  //           Go back
+  //         </Button>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="space-y-8">
